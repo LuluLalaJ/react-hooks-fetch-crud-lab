@@ -1,6 +1,6 @@
 import React from "react";
 
-function QuestionItem({ question, handleDelete }) {
+function QuestionItem({ question, handleDelete, handleUpdate}) {
   const { id, prompt, answers, correctIndex } = question;
 
   const options = answers.map((answer, index) => (
@@ -25,8 +25,11 @@ function QuestionItem({ question, handleDelete }) {
 
     fetch("http://localhost:4000/questions/"+`${id}`, updateAnswer)
     .then(r => r.json())
-    .then(data => console.log(data))
+    .then(data => handleUpdate(data))
+    //even though without handleUpdate (which is to update the state), what users see are the same; the state is however different
+    //always make sure state is in sync with the backend 
   }
+
 
   return (
     <li>

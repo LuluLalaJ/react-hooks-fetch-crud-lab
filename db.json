@@ -9,7 +9,7 @@
         "key",
         "prop"
       ],
-      "correctIndex": "0"
+      "correctIndex": "2"
     },
     {
       "id": 2,
@@ -20,7 +20,7 @@
         "props",
         "state"
       ],
-      "correctIndex": 1
+      "correctIndex": "0"
     },
     {
       "id": 3,
@@ -64,18 +64,7 @@
         "reactive",
         "controlled"
       ],
-      "correctIndex": 1
-    },
-    {
-      "prompt": "",
-      "answers": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "correctIndex": 0,
-      "id": 7
+      "correctIndex": "2"
     }
   ]
 }

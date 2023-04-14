@@ -19,7 +19,15 @@ function QuestionList({pageStatus}) {
     .then(() => setShownQuestions(shownQuestions.filter(question => question.id !== id)))
   }
 
-  const displayQuestions = shownQuestions.map( question => <QuestionItem key={question.id} question={question} handleDelete={handleDelete}/>)
+  function handleUpdate(data) {
+    const updatedQuestions = shownQuestions.map(question => {
+      if (question.id === data.id) {
+        return data
+      } return question 
+    })
+    setShownQuestions(updatedQuestions)
+  }
+  const displayQuestions = shownQuestions.map( question => <QuestionItem key={question.id} question={question} handleDelete={handleDelete} handleUpdate={handleUpdate}/>)
 
   return (
     <section>
